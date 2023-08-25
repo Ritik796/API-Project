@@ -1,0 +1,301 @@
+[debug] [2023-08-25T07:35:04.511Z] ----------------------------------------------------------------------
+[debug] [2023-08-25T07:35:04.516Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Abhay Khandal\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-08-25T07:35:04.517Z] CLI Version:   12.5.2
+[debug] [2023-08-25T07:35:04.517Z] Platform:      win32
+[debug] [2023-08-25T07:35:04.518Z] Node Version:  v18.16.0
+[debug] [2023-08-25T07:35:04.519Z] Time:          Fri Aug 25 2023 13:05:04 GMT+0530 (India Standard Time)
+[debug] [2023-08-25T07:35:04.520Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-08-25T07:35:04.653Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-08-25T07:35:04.654Z] > authorizing via signed-in user (wevois.dev@gmail.com)
+[debug] [2023-08-25T07:35:04.654Z] [iam] checking project wevoisdev-94a32 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2023-08-25T07:35:04.657Z] > refreshing access token with scopes: []
+[debug] [2023-08-25T07:35:04.660Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-08-25T07:35:04.660Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-08-25T07:35:04.969Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-08-25T07:35:04.969Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-08-25T07:35:04.981Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/wevoisdev-94a32:testIamPermissions [none]
+[debug] [2023-08-25T07:35:04.981Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/wevoisdev-94a32:testIamPermissions x-goog-quota-user=projects/wevoisdev-94a32
+[debug] [2023-08-25T07:35:04.982Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/wevoisdev-94a32:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2023-08-25T07:35:06.586Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/wevoisdev-94a32:testIamPermissions 200
+[debug] [2023-08-25T07:35:06.586Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/wevoisdev-94a32:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2023-08-25T07:35:06.587Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/wevoisdev-94a32/serviceAccounts/wevoisdev-94a32@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2023-08-25T07:35:06.587Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/wevoisdev-94a32/serviceAccounts/wevoisdev-94a32@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2023-08-25T07:35:08.391Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/wevoisdev-94a32/serviceAccounts/wevoisdev-94a32@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2023-08-25T07:35:08.391Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/wevoisdev-94a32/serviceAccounts/wevoisdev-94a32@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[info] 
+[info] === Deploying to 'wevoisdev-94a32'...
+[info] 
+[info] i  deploying functions 
+[debug] [2023-08-25T07:35:08.396Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/wevoisdev-94a32 [none]
+[debug] [2023-08-25T07:35:09.242Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/wevoisdev-94a32 200
+[debug] [2023-08-25T07:35:09.242Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/wevoisdev-94a32 {"projectId":"wevoisdev-94a32","projectNumber":"1084311190022","displayName":"WeVOISDEV","name":"projects/wevoisdev-94a32","resources":{"hostingSite":"wevoisdev-94a32","realtimeDatabaseInstance":"wevoisdev-94a32-default-rtdb","storageBucket":"wevoisdev-94a32.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_534ca063-da43-46e2-b437-14aaeffc61e8"}
+[info] i  functions: preparing codebase default for deployment 
+[info] i  functions: preparing codebase login for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2023-08-25T07:35:09.246Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/wevoisdev-94a32/services/cloudfunctions.googleapis.com [none]
+[debug] [2023-08-25T07:35:09.246Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/wevoisdev-94a32/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/wevoisdev-94a32
+[debug] [2023-08-25T07:35:09.248Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/wevoisdev-94a32/services/runtimeconfig.googleapis.com [none]
+[debug] [2023-08-25T07:35:09.248Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/wevoisdev-94a32/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/wevoisdev-94a32
+[debug] [2023-08-25T07:35:09.250Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/wevoisdev-94a32/services/cloudbuild.googleapis.com [none]
+[debug] [2023-08-25T07:35:09.250Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/wevoisdev-94a32/services/cloudbuild.googleapis.com x-goog-quota-user=projects/wevoisdev-94a32
+[debug] [2023-08-25T07:35:09.252Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/wevoisdev-94a32/services/artifactregistry.googleapis.com [none]
+[debug] [2023-08-25T07:35:09.252Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/wevoisdev-94a32/services/artifactregistry.googleapis.com x-goog-quota-user=projects/wevoisdev-94a32
+[debug] [2023-08-25T07:35:11.410Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/wevoisdev-94a32/services/cloudfunctions.googleapis.com 200
+[debug] [2023-08-25T07:35:11.411Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/wevoisdev-94a32/services/cloudfunctions.googleapis.com [omitted]
+[info] +  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2023-08-25T07:35:11.415Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/wevoisdev-94a32/services/cloudbuild.googleapis.com 200
+[debug] [2023-08-25T07:35:11.415Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/wevoisdev-94a32/services/cloudbuild.googleapis.com [omitted]
+[info] +  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2023-08-25T07:35:11.441Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/wevoisdev-94a32/services/artifactregistry.googleapis.com 200
+[debug] [2023-08-25T07:35:11.441Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/wevoisdev-94a32/services/artifactregistry.googleapis.com [omitted]
+[info] +  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2023-08-25T07:35:11.495Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/wevoisdev-94a32/services/runtimeconfig.googleapis.com 200
+[debug] [2023-08-25T07:35:11.495Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/wevoisdev-94a32/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2023-08-25T07:35:11.496Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/wevoisdev-94a32/adminSdkConfig [none]
+[debug] [2023-08-25T07:35:11.980Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/wevoisdev-94a32/adminSdkConfig 200
+[debug] [2023-08-25T07:35:11.980Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/wevoisdev-94a32/adminSdkConfig {"projectId":"wevoisdev-94a32","databaseURL":"https://wevoisdev-94a32-default-rtdb.firebaseio.com","storageBucket":"wevoisdev-94a32.appspot.com","locationId":"us-central"}
+[debug] [2023-08-25T07:35:11.981Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/wevoisdev-94a32/configs [none]
+[debug] [2023-08-25T07:35:12.805Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/wevoisdev-94a32/configs 200
+[debug] [2023-08-25T07:35:12.806Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/wevoisdev-94a32/configs {}
+[debug] [2023-08-25T07:35:12.809Z] Validating nodejs source
+[debug] [2023-08-25T07:35:19.072Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-08-25T07:35:19.072Z] Building nodejs source
+[info] i  functions: Loading and analyzing source code for codebase default to determine what to deploy 
+[debug] [2023-08-25T07:35:19.075Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-08-25T07:35:19.088Z] Found firebase-functions binary at 'F:\API-Project\node_modules\.bin\firebase-functions'
+[info] Serving at port 8306
+
+[debug] [2023-08-25T07:35:21.629Z] Got response from /__/functions.yaml {"endpoints":{"helloWorld":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"helloWorld"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[debug] [2023-08-25T07:35:21.660Z] Validating nodejs source
+[debug] [2023-08-25T07:35:24.220Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-08-25T07:35:24.221Z] Building nodejs source
+[info] i  functions: Loading and analyzing source code for codebase login to determine what to deploy 
+[debug] [2023-08-25T07:35:24.222Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-08-25T07:35:24.230Z] Found firebase-functions binary at 'F:\API-Project\node_modules\.bin\firebase-functions'
+[info] Serving at port 8395
+
+[debug] [2023-08-25T07:35:24.843Z] Got response from /__/functions.yaml {"endpoints":{},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[info] i  functions: preparing functions directory for uploading... 
+[info] i  functions: packaged F:\API-Project\functions (943 B) for uploading 
+[debug] [2023-08-25T07:35:24.904Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/wevoisdev-94a32/locations/-/functions [none]
+[debug] [2023-08-25T07:35:25.665Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/wevoisdev-94a32/locations/-/functions 200
+[debug] [2023-08-25T07:35:25.665Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/wevoisdev-94a32/locations/-/functions {}
+[debug] [2023-08-25T07:35:25.666Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/wevoisdev-94a32/locations/-/functions filter=environment%3D%22GEN_2%22
+[debug] [2023-08-25T07:35:27.432Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/wevoisdev-94a32/locations/-/functions 200
+[debug] [2023-08-25T07:35:27.433Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/wevoisdev-94a32/locations/-/functions {}
+[info] i  functions: ensuring required API run.googleapis.com is enabled... 
+[info] i  functions: ensuring required API eventarc.googleapis.com is enabled... 
+[info] i  functions: ensuring required API pubsub.googleapis.com is enabled... 
+[info] i  functions: ensuring required API storage.googleapis.com is enabled... 
+[debug] [2023-08-25T07:35:27.438Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/wevoisdev-94a32/services/run.googleapis.com [none]
+[debug] [2023-08-25T07:35:27.438Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/wevoisdev-94a32/services/run.googleapis.com x-goog-quota-user=projects/wevoisdev-94a32
+[debug] [2023-08-25T07:35:27.440Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/wevoisdev-94a32/services/eventarc.googleapis.com [none]
+[debug] [2023-08-25T07:35:27.440Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/wevoisdev-94a32/services/eventarc.googleapis.com x-goog-quota-user=projects/wevoisdev-94a32
+[debug] [2023-08-25T07:35:27.443Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/wevoisdev-94a32/services/pubsub.googleapis.com [none]
+[debug] [2023-08-25T07:35:27.443Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/wevoisdev-94a32/services/pubsub.googleapis.com x-goog-quota-user=projects/wevoisdev-94a32
+[debug] [2023-08-25T07:35:27.445Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/wevoisdev-94a32/services/storage.googleapis.com [none]
+[debug] [2023-08-25T07:35:27.445Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/wevoisdev-94a32/services/storage.googleapis.com x-goog-quota-user=projects/wevoisdev-94a32
+[debug] [2023-08-25T07:35:29.360Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/wevoisdev-94a32/services/storage.googleapis.com 200
+[debug] [2023-08-25T07:35:29.360Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/wevoisdev-94a32/services/storage.googleapis.com [omitted]
+[info] +  functions: required API storage.googleapis.com is enabled 
+[debug] [2023-08-25T07:35:29.438Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/wevoisdev-94a32/services/run.googleapis.com 200
+[debug] [2023-08-25T07:35:29.438Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/wevoisdev-94a32/services/run.googleapis.com [omitted]
+[warn] !  functions: missing required API run.googleapis.com. Enabling now... 
+[debug] [2023-08-25T07:35:29.439Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/wevoisdev-94a32/services/run.googleapis.com:enable [none]
+[debug] [2023-08-25T07:35:29.439Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/wevoisdev-94a32/services/run.googleapis.com:enable x-goog-quota-user=projects/wevoisdev-94a32
+[debug] [2023-08-25T07:35:29.444Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/wevoisdev-94a32/services/pubsub.googleapis.com 200
+[debug] [2023-08-25T07:35:29.444Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/wevoisdev-94a32/services/pubsub.googleapis.com [omitted]
+[info] +  functions: required API pubsub.googleapis.com is enabled 
+[debug] [2023-08-25T07:35:29.490Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/wevoisdev-94a32/services/eventarc.googleapis.com 200
+[debug] [2023-08-25T07:35:29.490Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/wevoisdev-94a32/services/eventarc.googleapis.com [omitted]
+[warn] !  functions: missing required API eventarc.googleapis.com. Enabling now... 
+[debug] [2023-08-25T07:35:29.491Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/wevoisdev-94a32/services/eventarc.googleapis.com:enable [none]
+[debug] [2023-08-25T07:35:29.491Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/wevoisdev-94a32/services/eventarc.googleapis.com:enable x-goog-quota-user=projects/wevoisdev-94a32
+[debug] [2023-08-25T07:35:31.699Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/wevoisdev-94a32/services/run.googleapis.com:enable 200
+[debug] [2023-08-25T07:35:31.700Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/wevoisdev-94a32/services/run.googleapis.com:enable [omitted]
+[debug] [2023-08-25T07:35:31.721Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/wevoisdev-94a32/services/eventarc.googleapis.com:enable 200
+[debug] [2023-08-25T07:35:31.721Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/wevoisdev-94a32/services/eventarc.googleapis.com:enable [omitted]
+[debug] [2023-08-25T07:35:41.708Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/wevoisdev-94a32/services/run.googleapis.com [none]
+[debug] [2023-08-25T07:35:41.708Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/wevoisdev-94a32/services/run.googleapis.com x-goog-quota-user=projects/wevoisdev-94a32
+[debug] [2023-08-25T07:35:41.724Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/wevoisdev-94a32/services/eventarc.googleapis.com [none]
+[debug] [2023-08-25T07:35:41.724Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/wevoisdev-94a32/services/eventarc.googleapis.com x-goog-quota-user=projects/wevoisdev-94a32
+[debug] [2023-08-25T07:35:43.651Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/wevoisdev-94a32/services/eventarc.googleapis.com 200
+[debug] [2023-08-25T07:35:43.652Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/wevoisdev-94a32/services/eventarc.googleapis.com [omitted]
+[info] +  functions: required API eventarc.googleapis.com is enabled 
+[debug] [2023-08-25T07:35:43.662Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/wevoisdev-94a32/services/run.googleapis.com 200
+[debug] [2023-08-25T07:35:43.662Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/wevoisdev-94a32/services/run.googleapis.com [omitted]
+[info] +  functions: required API run.googleapis.com is enabled 
+[info] i  functions: generating the service identity for pubsub.googleapis.com... 
+[info] i  functions: generating the service identity for eventarc.googleapis.com... 
+[debug] [2023-08-25T07:35:43.670Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/1084311190022/services/pubsub.googleapis.com:generateServiceIdentity [none]
+[debug] [2023-08-25T07:35:43.673Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/1084311190022/services/eventarc.googleapis.com:generateServiceIdentity [none]
+[debug] [2023-08-25T07:35:45.746Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/1084311190022/services/pubsub.googleapis.com:generateServiceIdentity 200
+[debug] [2023-08-25T07:35:45.746Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/1084311190022/services/pubsub.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-1084311190022@gcp-sa-pubsub.iam.gserviceaccount.com","uniqueId":"112617012719091922770"}}
+[debug] [2023-08-25T07:35:45.941Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/1084311190022/services/eventarc.googleapis.com:generateServiceIdentity 200
+[debug] [2023-08-25T07:35:45.942Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/1084311190022/services/eventarc.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-1084311190022@gcp-sa-eventarc.iam.gserviceaccount.com","uniqueId":"100030877884068255316"}}
+[debug] [2023-08-25T07:35:45.944Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/wevoisdev-94a32 [none]
+[debug] [2023-08-25T07:35:46.498Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/wevoisdev-94a32 200
+[debug] [2023-08-25T07:35:46.499Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/wevoisdev-94a32 {"projectId":"wevoisdev-94a32","projectNumber":"1084311190022","displayName":"WeVOISDEV","name":"projects/wevoisdev-94a32","resources":{"hostingSite":"wevoisdev-94a32","realtimeDatabaseInstance":"wevoisdev-94a32-default-rtdb","storageBucket":"wevoisdev-94a32.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_534ca063-da43-46e2-b437-14aaeffc61e8"}
+[debug] [2023-08-25T07:35:46.501Z] [functions] found 1 new HTTP functions, testing setIamPolicy permission...
+[debug] [2023-08-25T07:35:46.502Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/wevoisdev-94a32:testIamPermissions [none]
+[debug] [2023-08-25T07:35:46.502Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/wevoisdev-94a32:testIamPermissions x-goog-quota-user=projects/wevoisdev-94a32
+[debug] [2023-08-25T07:35:46.502Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/wevoisdev-94a32:testIamPermissions {"permissions":["cloudfunctions.functions.setIamPolicy"]}
+[debug] [2023-08-25T07:35:48.647Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/wevoisdev-94a32:testIamPermissions 200
+[debug] [2023-08-25T07:35:48.647Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/wevoisdev-94a32:testIamPermissions {"permissions":["cloudfunctions.functions.setIamPolicy"]}
+[debug] [2023-08-25T07:35:48.647Z] [functions] found setIamPolicy permission, proceeding with deploy
+[debug] [2023-08-25T07:35:48.649Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v2/projects/wevoisdev-94a32/locations/us-central1/functions:generateUploadUrl [none]
+[debug] [2023-08-25T07:35:50.584Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v2/projects/wevoisdev-94a32/locations/us-central1/functions:generateUploadUrl 200
+[debug] [2023-08-25T07:35:50.584Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/wevoisdev-94a32/locations/us-central1/functions:generateUploadUrl {"uploadUrl":"https://storage.googleapis.com/gcf-v2-uploads-1084311190022-us-central1/643d2bd4-fdf2-4f00-bfa7-aa0cefda5428.zip?GoogleAccessId=service-1084311190022@gcf-admin-robot.iam.gserviceaccount.com&Expires=1692950750&Signature=NZwBEpKgC1cAaNoWwDgMLhm2J7YeRZZvAowee9KjWhp%2FQG2IeAtwq6jNZ4EoS%2BdQPHglxFKpMrsIME4LURD04s9F7KnSFALlNrdR7JFMYwieCirEd%2FEKXCDt98EvzUrUuQ0FxKwwKIqKWsIi5m6boExL2kjDZy%2FbyDuHsdlwbRrt9FqmWezLCHSsx%2BraedP3YySjEz8XIEo44S4Tm8IPfSS5KMlIckc9lAuHME1EnMOlNYxuWtCEQpY97f9smQHSm8ZXsfD%2BryhSuoViZdv3vb6qIPC8maICQ6Me%2F679PhGN1mdzTt0%2BisG1ndH1gXGI1jgU%2F%2BQ0esMQkLQjSbKW3g%3D%3D","storageSource":{"bucket":"gcf-v2-uploads-1084311190022-us-central1","object":"643d2bd4-fdf2-4f00-bfa7-aa0cefda5428.zip"}}
+[debug] [2023-08-25T07:35:50.586Z] >>> [apiv2][query] PUT https://storage.googleapis.com/gcf-v2-uploads-1084311190022-us-central1/643d2bd4-fdf2-4f00-bfa7-aa0cefda5428.zip GoogleAccessId=service-1084311190022%40gcf-admin-robot.iam.gserviceaccount.com&Expires=1692950750&Signature=NZwBEpKgC1cAaNoWwDgMLhm2J7YeRZZvAowee9KjWhp%2FQG2IeAtwq6jNZ4EoS%2BdQPHglxFKpMrsIME4LURD04s9F7KnSFALlNrdR7JFMYwieCirEd%2FEKXCDt98EvzUrUuQ0FxKwwKIqKWsIi5m6boExL2kjDZy%2FbyDuHsdlwbRrt9FqmWezLCHSsx%2BraedP3YySjEz8XIEo44S4Tm8IPfSS5KMlIckc9lAuHME1EnMOlNYxuWtCEQpY97f9smQHSm8ZXsfD%2BryhSuoViZdv3vb6qIPC8maICQ6Me%2F679PhGN1mdzTt0%2BisG1ndH1gXGI1jgU%2F%2BQ0esMQkLQjSbKW3g%3D%3D
+[debug] [2023-08-25T07:35:50.586Z] >>> [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-1084311190022-us-central1/643d2bd4-fdf2-4f00-bfa7-aa0cefda5428.zip [stream]
+[debug] [2023-08-25T07:35:51.141Z] <<< [apiv2][status] PUT https://storage.googleapis.com/gcf-v2-uploads-1084311190022-us-central1/643d2bd4-fdf2-4f00-bfa7-aa0cefda5428.zip 200
+[debug] [2023-08-25T07:35:51.141Z] <<< [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-1084311190022-us-central1/643d2bd4-fdf2-4f00-bfa7-aa0cefda5428.zip [omitted]
+[info] +  functions: functions folder uploaded successfully 
+[info] i  functions: creating Node.js 18 (2nd Gen) function helloWorld(us-central1)... 
+[debug] [2023-08-25T07:35:51.153Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v2/projects/wevoisdev-94a32/locations/us-central1/functions functionId=helloWorld
+[debug] [2023-08-25T07:35:51.153Z] >>> [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/wevoisdev-94a32/locations/us-central1/functions {"name":"projects/wevoisdev-94a32/locations/us-central1/functions/helloWorld","buildConfig":{"runtime":"nodejs18","entryPoint":"helloWorld","source":{"storageSource":{"bucket":"gcf-v2-uploads-1084311190022-us-central1","object":"643d2bd4-fdf2-4f00-bfa7-aa0cefda5428.zip"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""}},"serviceConfig":{"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"wevoisdev-94a32\",\"databaseURL\":\"https://wevoisdev-94a32-default-rtdb.firebaseio.com\",\"storageBucket\":\"wevoisdev-94a32.appspot.com\",\"locationId\":\"us-central\"}","GCLOUD_PROJECT":"wevoisdev-94a32","EVENTARC_CLOUD_EVENT_SOURCE":"projects/wevoisdev-94a32/locations/us-central1/services/helloWorld"},"ingressSettings":null,"timeoutSeconds":null,"serviceAccountEmail":null,"availableMemory":"256Mi","minInstanceCount":null,"maxInstanceCount":null,"maxInstanceRequestConcurrency":80,"availableCpu":"1","vpcConnector":null,"vpcConnectorEgressSettings":null},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"824b7a5fc9150a3845b31e2c98d3fd72c64f7745"}}
+[debug] [2023-08-25T07:35:53.725Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v2/projects/wevoisdev-94a32/locations/us-central1/functions 400
+[debug] [2023-08-25T07:35:53.726Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/wevoisdev-94a32/locations/us-central1/functions {"error":{"code":400,"message":"Could not create Cloud Run service helloworld. spec.template.spec.containers.resources.limits.cpu: Invalid value specified for cpu. For the specified value, maxScale may not exceed 10.\nConsider running your workload in a region with greater capacity, decreasing your requested cpu-per-instance, or requesting an increase in quota for this region if you are seeing sustained usage near this limit, see https://cloud.google.com/run/quotas. Your project may gain access to further scaling by adding billing information to your account.","status":"INVALID_ARGUMENT"}}
+[warn] !  functions: Your current project quotas don't allow for the current max instances setting of 100. Either reduce this function's maximum instances, or request a quota increase on the underlying Cloud Run service at https://cloud.google.com/run/quotas. 
+[warn] !  functions: You can adjust the max instances value in your function's runtime options:
+	setGlobalOptions({maxInstances: 10}) 
+[error] Failed to create function projects/wevoisdev-94a32/locations/us-central1/functions/helloWorld
+[debug] [2023-08-25T07:35:53.739Z] Total Function Deployment time: 2583
+[debug] [2023-08-25T07:35:53.739Z] 1 Functions Deployed
+[debug] [2023-08-25T07:35:53.739Z] 1 Functions Errored
+[debug] [2023-08-25T07:35:53.739Z] 0 Function Deployments Aborted
+[debug] [2023-08-25T07:35:53.739Z] Average Function Deployment time: 2581
+[info] 
+[info] Functions deploy had errors with the following functions:
+	helloWorld(us-central1)
+[debug] [2023-08-25T07:35:53.989Z] Not printing URL for HTTPS function. Typically this means it didn't match a filter or we failed deployment
+[info] i  functions: cleaning up build files... 
+[debug] [2023-08-25T07:35:53.992Z] >>> [apiv2][query] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/wevoisdev-94a32/locations/us-central1/repositories/gcf-artifacts/packages/hello_world [none]
+[debug] [2023-08-25T07:35:53.994Z] >>> [apiv2][query] GET https://us.gcr.io/v2/wevoisdev-94a32/gcf/us-central1/tags/list [none]
+[debug] [2023-08-25T07:35:54.668Z] <<< [apiv2][status] GET https://us.gcr.io/v2/wevoisdev-94a32/gcf/us-central1/tags/list 200
+[debug] [2023-08-25T07:35:54.668Z] <<< [apiv2][body] GET https://us.gcr.io/v2/wevoisdev-94a32/gcf/us-central1/tags/list {"child":[],"manifest":{},"name":"wevoisdev-94a32/gcf/us-central1","tags":[]}
+[debug] [2023-08-25T07:35:54.669Z] Could not find image for function projects/wevoisdev-94a32/locations/us-central1/functions/helloWorld
+[debug] [2023-08-25T07:35:55.571Z] <<< [apiv2][status] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/wevoisdev-94a32/locations/us-central1/repositories/gcf-artifacts/packages/hello_world 404
+[debug] [2023-08-25T07:35:55.571Z] <<< [apiv2][body] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/wevoisdev-94a32/locations/us-central1/repositories/gcf-artifacts/packages/hello_world {"error":{"code":404,"message":"Package \"projects/wevoisdev-94a32/locations/us-central1/repositories/gcf-artifacts/packages/hello_world\" was not found.","status":"NOT_FOUND"}}
+[debug] [2023-08-25T07:35:55.571Z] Functions deploy failed.
+[debug] [2023-08-25T07:35:55.572Z] {
+  "endpoint": {
+    "id": "helloWorld",
+    "project": "wevoisdev-94a32",
+    "region": "us-central1",
+    "entryPoint": "helloWorld",
+    "platform": "gcfv2",
+    "runtime": "nodejs18",
+    "httpsTrigger": {},
+    "labels": {
+      "deployment-tool": "cli-firebase"
+    },
+    "serviceAccount": null,
+    "ingressSettings": null,
+    "availableMemoryMb": null,
+    "timeoutSeconds": null,
+    "maxInstances": null,
+    "minInstances": null,
+    "concurrency": 80,
+    "vpc": null,
+    "environmentVariables": {
+      "FIREBASE_CONFIG": "{\"projectId\":\"wevoisdev-94a32\",\"databaseURL\":\"https://wevoisdev-94a32-default-rtdb.firebaseio.com\",\"storageBucket\":\"wevoisdev-94a32.appspot.com\",\"locationId\":\"us-central\"}",
+      "GCLOUD_PROJECT": "wevoisdev-94a32",
+      "EVENTARC_CLOUD_EVENT_SOURCE": "projects/wevoisdev-94a32/locations/us-central1/services/helloWorld"
+    },
+    "codebase": "default",
+    "cpu": 1,
+    "targetedByOnly": false,
+    "hash": "824b7a5fc9150a3845b31e2c98d3fd72c64f7745"
+  },
+  "op": "create",
+  "original": {
+    "name": "FirebaseError",
+    "children": [],
+    "context": {
+      "function": "projects/wevoisdev-94a32/locations/us-central1/functions/helloWorld"
+    },
+    "exit": 1,
+    "message": "Failed to create function projects/wevoisdev-94a32/locations/us-central1/functions/helloWorld",
+    "original": {
+      "name": "FirebaseError",
+      "children": [],
+      "context": {
+        "body": {
+          "error": {
+            "code": 400,
+            "message": "Could not create Cloud Run service helloworld. spec.template.spec.containers.resources.limits.cpu: Invalid value specified for cpu. For the specified value, maxScale may not exceed 10.\nConsider running your workload in a region with greater capacity, decreasing your requested cpu-per-instance, or requesting an increase in quota for this region if you are seeing sustained usage near this limit, see https://cloud.google.com/run/quotas. Your project may gain access to further scaling by adding billing information to your account.",
+            "status": "INVALID_ARGUMENT"
+          }
+        },
+        "response": {
+          "statusCode": 400
+        }
+      },
+      "exit": 1,
+      "message": "HTTP Error: 400, Could not create Cloud Run service helloworld. spec.template.spec.containers.resources.limits.cpu: Invalid value specified for cpu. For the specified value, maxScale may not exceed 10.\nConsider running your workload in a region with greater capacity, decreasing your requested cpu-per-instance, or requesting an increase in quota for this region if you are seeing sustained usage near this limit, see https://cloud.google.com/run/quotas. Your project may gain access to further scaling by adding billing information to your account.",
+      "status": 400
+    },
+    "status": 400,
+    "code": 400
+  }
+}
+[debug] [2023-08-25T07:35:55.823Z] Error: Failed to create function helloWorld in region us-central1
+    at C:\Users\Abhay Khandal\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:288:27
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Fabricator.createV2Function (C:\Users\Abhay Khandal\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:276:30)
+    at async Fabricator.createEndpoint (C:\Users\Abhay Khandal\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:135:13)
+    at async handle (C:\Users\Abhay Khandal\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:88:17)
+[error] 
+[error] Error: There was an error deploying functions
